@@ -7,24 +7,26 @@ factory.Uri = new Uri("amqps://rwxubjos:j1HoQTDNTJ4j-Qv5UKzqfeX1uHdwIMKt@hornet.
 using (var connection = factory.CreateConnection()) //connection
 {
    var channel = connection.CreateModel(); //channel
-   channel.QueueDeclare(
-                        queue: "hello-queue",
-                        durable: false,
-                        exclusive: false,
-                        autoDelete: false);
-   Enumerable.Range(1,50).ToList().ForEach(x =>
-   {
 
-      string message = $"Message {x} !";  //byte dizisi olarak gider.
-      var messageBody = Encoding.UTF8.GetBytes(message);
-      channel.BasicPublish(
-                           exchange: string.Empty,
-                           routingKey: "hello-queue",
-                           basicProperties: null,
-                           body: messageBody);
+   channel.ExchangeDeclare(exchange: "logs-fanout",
+                           type: ExchangeType.Fanout,
+                           durable: false,
+                           autoDelete: false,
+                           arguments: null);
 
-      Console.WriteLine($"{message} - Mesajınız gönderildi. Çıkmak için bir tuşa basınız");
-   });
+   Enumerable.Range(1, 50).ToList().ForEach(x =>
+    {
+
+       string message = $"Message {x} !";  //byte dizisi olarak gider.
+       var messageBody = Encoding.UTF8.GetBytes(message);
+       channel.BasicPublish(
+                            exchange: "logs-fanout",
+                            routingKey: string.Empty,
+                            basicProperties: null,
+                            body: messageBody);
+
+       Console.WriteLine($"{message} - Mesajınız gönderildi. Çıkmak için bir tuşa basınız");
+    });
 
    Console.ReadLine();
 }

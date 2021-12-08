@@ -1,0 +1,17 @@
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\bin\Debug\net6.0\rabbitmq.publisher.exe
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\bin\Debug\net6.0\rabbitmq.publisher.deps.json
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\bin\Debug\net6.0\rabbitmq.publisher.runtimeconfig.json
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\bin\Debug\net6.0\rabbitmq.publisher.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\bin\Debug\net6.0\ref\rabbitmq.publisher.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\bin\Debug\net6.0\rabbitmq.publisher.pdb
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.csproj.AssemblyReference.cache
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.AssemblyInfoInputs.cache
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.AssemblyInfo.cs
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.csproj.CoreCompileInputs.cache
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.csproj.CopyComplete
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\ref\rabbitmq.publisher.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.pdb
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.genruntimeconfig.cache

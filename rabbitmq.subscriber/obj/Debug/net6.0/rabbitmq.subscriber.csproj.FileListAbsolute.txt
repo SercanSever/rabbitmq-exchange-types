@@ -1,0 +1,17 @@
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\bin\Debug\net6.0\rabbitmq.subscriber.exe
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\bin\Debug\net6.0\rabbitmq.subscriber.deps.json
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\bin\Debug\net6.0\rabbitmq.subscriber.runtimeconfig.json
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\bin\Debug\net6.0\rabbitmq.subscriber.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\bin\Debug\net6.0\ref\rabbitmq.subscriber.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\bin\Debug\net6.0\rabbitmq.subscriber.pdb
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\bin\Debug\net6.0\RabbitMQ.Client.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.csproj.AssemblyReference.cache
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.AssemblyInfoInputs.cache
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.AssemblyInfo.cs
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.csproj.CoreCompileInputs.cache
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.csproj.CopyComplete
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\ref\rabbitmq.subscriber.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.pdb
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.genruntimeconfig.cache

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "QdMnkc9LmSFdJUBI5Nv/czpncJAnOaSjDdCBdcPD8D0F4e5WKExCmSOp157Jv8MSmnLF1sI6mnw4WSyuTnmvqg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Sercan Sever\\source\\repos\\DotnetCoreRabbitMQ\\rabbitmq.subscriber\\rabbitmq.subscriber.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Sercan Sever\\.nuget\\packages\\rabbitmq.client\\6.2.2\\rabbitmq.client.6.2.2.nupkg.sha512",
+    "C:\\Users\\Sercan Sever\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Sercan Sever\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}

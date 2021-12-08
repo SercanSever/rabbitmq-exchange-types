@@ -6,6 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="RabbitMQ.Client" Version="6.2.2"/>
+    <PackageReference Include="RabbitMQ.Client" Version="6.2.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\rabbitmq.shared\rabbitmq.shared.csproj" />
   </ItemGroup>
 </Project>

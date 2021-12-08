@@ -15,3 +15,5 @@ C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Deb
 C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\ref\rabbitmq.publisher.dll
 C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.pdb
 C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\obj\Debug\net6.0\rabbitmq.publisher.genruntimeconfig.cache
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\bin\Debug\net6.0\rabbitmq.shared.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.publisher\bin\Debug\net6.0\rabbitmq.shared.pdb

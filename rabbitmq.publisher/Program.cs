@@ -1,4 +1,6 @@
 ﻿using System.Text;
+using System.Text.Json;
+using rabbitmq.shared;
 using RabbitMQ.Client;
 
 var factory = new ConnectionFactory();
@@ -23,7 +25,10 @@ using (var connection = factory.CreateConnection()) //connection
    properties.Headers = headers;
    properties.Persistent = true; // messages are not deleted
 
-   channel.BasicPublish("header-exchange", string.Empty, properties, Encoding.UTF8.GetBytes("header mesajım"));
+   var product = new Product { Id = 1, Name = "Laptop", Price = 1000, Stock = 5 };
+   var productJsonString = JsonSerializer.Serialize(product);
+
+   channel.BasicPublish("header-exchange", string.Empty, properties, Encoding.UTF8.GetBytes(productJsonString));
 
    Console.WriteLine("Mesaj Gönderildi");
    Console.ReadLine();

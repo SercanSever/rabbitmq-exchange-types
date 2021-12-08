@@ -15,3 +15,5 @@ C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\De
 C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\ref\rabbitmq.subscriber.dll
 C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.pdb
 C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\obj\Debug\net6.0\rabbitmq.subscriber.genruntimeconfig.cache
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\bin\Debug\net6.0\rabbitmq.shared.dll
+C:\Users\Sercan Sever\source\repos\DotnetCoreRabbitMQ\rabbitmq.subscriber\bin\Debug\net6.0\rabbitmq.shared.pdb

@@ -1,4 +1,6 @@
 ﻿using System.Text;
+using System.Text.Json;
+using rabbitmq.shared;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
@@ -20,7 +22,7 @@ using (var connection = factory.CreateConnection()) //connection
    Dictionary<string, object> headers = new Dictionary<string, object>();
    headers.Add("format", "pdf");
    headers.Add("shape", "a4");
-   headers.Add("x-match", "all");
+   headers.Add("x-match", "any");
 
    channel.QueueBind(queueName, "header-exchange", string.Empty, headers);
 
@@ -38,9 +40,15 @@ using (var connection = factory.CreateConnection()) //connection
    {
       var body = e.Body.ToArray();
       var message = Encoding.UTF8.GetString(body);
+
+      Product product = JsonSerializer.Deserialize<Product>(message);
       Thread.Sleep(400);
 
-      Console.WriteLine("Gelen Mesaj : " + message);
+      Console.WriteLine("Gelen Mesaj : " +
+      "Product ID : " + product.Id + "\n" +
+       "Product Name : " + product.Name + "\n" +
+        "Product Stock : " + product.Stock + "\n" +
+         "Product Price : " + product.Price);
 
       channel.BasicAck(e.DeliveryTag, false);
    };

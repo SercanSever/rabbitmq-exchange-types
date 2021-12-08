@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TTRDCuGet+1GRm9Bw6fHLWCq4/LMNa6H97/rK0kHa9GUoWWU4Ognde6k3bkj06gg9gx5yWcQy+iLbIK/hZFjkA==",
+  "dgSpecHash": "a5srurhlMEzZvOjfNDoYPiGa/cNpONuItpVuKOlrRfjlTKJauWKNcR6oKSEBqYpoKPhHE7OxaEllFrWNQ3Mm2A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Sercan Sever\\source\\repos\\DotnetCoreRabbitMQ\\rabbitmq.publisher\\rabbitmq.publisher.csproj",
   "expectedPackageFiles": [

@@ -9,17 +9,20 @@ using (var connection = factory.CreateConnection()) //connection
 {
    var channel = connection.CreateModel(); //channel
 
-   channel.ExchangeDeclare(exchange: "logs-topic",
-                           type: ExchangeType.Topic,
+   channel.ExchangeDeclare(exchange: "header-exchange",
+                           type: ExchangeType.Headers,
                            durable: false,
                            autoDelete: false,
                            arguments: null);
 
    var queueName = channel.QueueDeclare().QueueName;
 
-   var routeKey = "*.Error.*";
+   Dictionary<string, object> headers = new Dictionary<string, object>();
+   headers.Add("format", "pdf");
+   headers.Add("shape", "a4");
+   headers.Add("x-match", "all");
 
-   channel.QueueBind(queueName, "logs-topic", routeKey, arguments: null);
+   channel.QueueBind(queueName, "header-exchange", string.Empty, headers);
 
    channel.BasicQos(0, 1, false);
 
@@ -37,9 +40,7 @@ using (var connection = factory.CreateConnection()) //connection
       var message = Encoding.UTF8.GetString(body);
       Thread.Sleep(400);
 
-      Console.WriteLine("Log : " + message);
-
-      // File.AppendAllText("log-Warning.txt",message + "\n");
+      Console.WriteLine("Gelen Mesaj : " + message);
 
       channel.BasicAck(e.DeliveryTag, false);
    };

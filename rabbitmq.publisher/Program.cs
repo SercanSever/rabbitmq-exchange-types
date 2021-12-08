@@ -8,34 +8,23 @@ using (var connection = factory.CreateConnection()) //connection
 {
    var channel = connection.CreateModel(); //channel
 
-   channel.ExchangeDeclare(exchange: "logs-topic",
-                           type: ExchangeType.Topic,
+   channel.ExchangeDeclare(exchange: "header-exchange",
+                           type: ExchangeType.Headers,
                            durable: false,
                            autoDelete: false,
                            arguments: null);
 
-   Enumerable.Range(1, 50).ToList().ForEach(x =>
-    {
-       Random rnd = new Random();
-       LogNames log1 = (LogNames)rnd.Next(1, 4);
-       LogNames log2 = (LogNames)rnd.Next(1, 4);
-       LogNames log3 = (LogNames)rnd.Next(1, 4);
+   Dictionary<string, object> headers = new Dictionary<string, object>();
 
-       var routeKey = $"{log1}.{log2}.{log3}";
-       
-       string message = $"log-type : {log1} - {log2} - {log3}";
+   headers.Add("format", "pdf");
+   headers.Add("shape", "a4");
 
-       var messageBody = Encoding.UTF8.GetBytes(message);
+   var properties = channel.CreateBasicProperties();
+   properties.Headers = headers;
 
-       channel.BasicPublish(
-                            exchange: "logs-topic",
-                            routingKey: routeKey,
-                            basicProperties: null,
-                            body: messageBody);
+   channel.BasicPublish("header-exchange", string.Empty, properties, Encoding.UTF8.GetBytes("header mesajım"));
 
-       Console.WriteLine($"{message} - Log gönderildi. Çıkmak için bir tuşa basınız");
-    });
-
+   Console.WriteLine("Mesaj Gönderildi");
    Console.ReadLine();
 }
 

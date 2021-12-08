@@ -8,9 +8,23 @@ factory.Uri = new Uri("amqps://rwxubjos:j1HoQTDNTJ4j-Qv5UKzqfeX1uHdwIMKt@hornet.
 using (var connection = factory.CreateConnection()) //connection
 {
    var channel = connection.CreateModel(); //channel
-   var queueName = "direct-queue-Warning";
+
+   channel.ExchangeDeclare(exchange: "logs-topic",
+                           type: ExchangeType.Topic,
+                           durable: false,
+                           autoDelete: false,
+                           arguments: null);
+
+   var queueName = channel.QueueDeclare().QueueName;
+
+   var routeKey = "*.Error.*";
+
+   channel.QueueBind(queueName, "logs-topic", routeKey, arguments: null);
+
    channel.BasicQos(0, 1, false);
+
    var consumer = new EventingBasicConsumer(channel);
+
    channel.BasicConsume(
                         queue: queueName,
                         autoAck: false,
@@ -23,7 +37,7 @@ using (var connection = factory.CreateConnection()) //connection
       var message = Encoding.UTF8.GetString(body);
       Thread.Sleep(400);
 
-      Console.WriteLine("Incoming Message : " + message);
+      Console.WriteLine("Log : " + message);
 
       // File.AppendAllText("log-Warning.txt",message + "\n");
 

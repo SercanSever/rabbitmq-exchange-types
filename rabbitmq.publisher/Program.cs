@@ -8,37 +8,32 @@ using (var connection = factory.CreateConnection()) //connection
 {
    var channel = connection.CreateModel(); //channel
 
-   channel.ExchangeDeclare(exchange: "logs-direct",
-                           type: ExchangeType.Direct,
+   channel.ExchangeDeclare(exchange: "logs-topic",
+                           type: ExchangeType.Topic,
                            durable: false,
                            autoDelete: false,
                            arguments: null);
 
-   Enum.GetNames(typeof(LogNames)).ToList().ForEach(x =>
-   {
-      var routeKey = $"route*{x}";
-      var queueName = $"direct-queue-{x}";
-      channel.QueueDeclare(queue: queueName, durable: false, exclusive: false, autoDelete: false, arguments: null);
-      channel.QueueBind(queue: queueName, exchange: "logs-direct", routingKey: routeKey, arguments: null);
-   });
-
    Enumerable.Range(1, 50).ToList().ForEach(x =>
     {
-       LogNames log = (LogNames)new Random().Next(0, 4);
+       Random rnd = new Random();
+       LogNames log1 = (LogNames)rnd.Next(1, 4);
+       LogNames log2 = (LogNames)rnd.Next(1, 4);
+       LogNames log3 = (LogNames)rnd.Next(1, 4);
 
-       string message = $"log-type : {log}";
+       var routeKey = $"{log1}.{log2}.{log3}";
+       
+       string message = $"log-type : {log1} - {log2} - {log3}";
 
        var messageBody = Encoding.UTF8.GetBytes(message);
 
-       var routeKey = $"route*{log}";
-
        channel.BasicPublish(
-                            exchange: "logs-direct",
+                            exchange: "logs-topic",
                             routingKey: routeKey,
                             basicProperties: null,
                             body: messageBody);
 
-       Console.WriteLine($"{message} - Mesajınız gönderildi. Çıkmak için bir tuşa basınız");
+       Console.WriteLine($"{message} - Log gönderildi. Çıkmak için bir tuşa basınız");
     });
 
    Console.ReadLine();
